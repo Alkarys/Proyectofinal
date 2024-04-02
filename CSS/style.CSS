@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +18,7 @@ header nav {
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  max-width: 1500px;
+  max-width: 1700px;
   border-radius: 10px;
 }
 
@@ -25,7 +26,7 @@ nav .left {
   flex: 1;
 }
 nav .left h2 {
-  font-family: DM sans-serif;
+  font-family: "DM Serif Display", serif;
 }
 
 nav .right {
@@ -45,6 +46,7 @@ main {
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 10px;
+  padding-bottom: 50px;
 }
 #title {
   position: relative;
@@ -70,11 +72,13 @@ main #text {
   color: rgba(126, 67, 51, 1);
   padding-top: 30px;
   padding-bottom: 30px;
+  font-family: "DM Serif Display", serif;
 }
 #grid-container {
   width: 100%; /* VW -> Viewport Width */
-  height: 100vh; /* VH -> Viewport Height */
+  /*height: 100vh; /* VH -> Viewport Height */
   margin: 0 auto;
+  gap: 20px;
 
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -84,19 +88,151 @@ main #text {
     " #four #five #six";
 }
 
-#one,
-#two,
-#three,
-#four,
-#five,
-#six {
-  background-color: white;
+#one #box1 img {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
 }
-#one img,
-#two img,
-#three img,
-#four img,
-#five img,
-#six img {
-  height: 100px;
+#one #box1 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+#one #box1 h1 {
+  color: rgba(126, 67, 51, 1);
+  padding: 10px;
+}
+#one #box1 ul li {
+  font-family: "DM Sans";
+}
+#two #box2 img {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+}
+#two #box2 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+#two #box2 h1 {
+  color: rgba(126, 67, 51, 1);
+  padding: 10px;
+}
+#two #box2 ul li {
+  font-family: "DM Sans";
+}
+#three #box3 img {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+}
+#three #box3 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+#three #box3 h1 {
+  color: rgba(126, 67, 51, 1);
+  padding: 10px;
+}
+#three #box3 ul li {
+  font-family: "DM Sans";
+}
+#four #box4 img {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+}
+#four #box4 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+#four #box4 h1 {
+  color: rgba(126, 67, 51, 1);
+  padding: 10px;
+}
+#four #box4 ul li {
+  font-family: "DM Sans";
+}
+#five #box5 img {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+}
+#five #box5 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+#five #box5 h1 {
+  color: rgba(126, 67, 51, 1);
+  padding: 10px;
+}
+#five #box5 ul li {
+  font-family: "DM Sans";
+}
+#six #box6 img {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+}
+#six #box6 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+#six #box6 h1 {
+  color: rgba(126, 67, 51, 1);
+  padding: 10px;
+}
+#six #box6 ul li {
+  font-family: "DM Sans";
+}
+footer {
+  padding: 0px 20px 0px 20px;
+}
+footer {
+  background-color: rgba(37, 85, 56, 1);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1700px;
+  border-radius: 10px;
+}
+
+footer .left {
+  flex: 1;
+}
+footer .left h2 {
+  font-family: "DM Serif Display", serif;
+}
+
+footer .right {
+  flex: 1;
+  text-align: right;
+  padding-right: 20px;
+}
+footer .right h2 {
+  font-family: "DM Sans";
 }
