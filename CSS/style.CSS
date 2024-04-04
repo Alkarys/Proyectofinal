@@ -4,6 +4,10 @@
   box-sizing: border-box;
   margin: 0;
 }
+* a {
+  text-decoration: none;
+  color: rgba(126, 67, 51, 1);
+}
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +24,9 @@ header nav {
   padding: 15px 20px;
   max-width: 1700px;
   border-radius: 10px;
+}
+header nav a {
+  color: white;
 }
 
 nav .left {
@@ -38,9 +45,10 @@ nav .right h2 {
   font-family: "DM Sans";
 }
 
-nav img {
+nav button {
   width: 34px;
   height: 34px;
+  background: transparent;
 }
 main {
   max-width: 1000px;
@@ -208,9 +216,7 @@ main #text {
 #six #box6 ul li {
   font-family: "DM Sans";
 }
-footer {
-  padding: 0px 20px 0px 20px;
-}
+
 footer {
   background-color: rgba(37, 85, 56, 1);
   color: white;
@@ -219,8 +225,11 @@ footer {
   padding: 15px 20px;
   max-width: 1700px;
   border-radius: 10px;
+  margin: 20px 20px 0px 20px;
 }
-
+footer a {
+  color: white;
+}
 footer .left {
   flex: 1;
 }
