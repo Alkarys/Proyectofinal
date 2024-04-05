@@ -22,7 +22,7 @@ header nav {
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  max-width: 1700px;
+  
   border-radius: 10px;
 }
 header nav a {
@@ -223,7 +223,7 @@ footer {
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  max-width: 1700px;
+  
   border-radius: 10px;
   margin: 20px 20px 0px 20px;
 }
@@ -244,4 +244,9 @@ footer .right {
 }
 footer .right h2 {
   font-family: "DM Sans";
+}
+@media (max-width: 1850px) {
+  header nav {
+    max-width: 2000px;
+  }
 }
