@@ -8,10 +8,17 @@
   text-decoration: none;
   color: white;
 }
+.dark p {
+  color: rgba(255, 255, 255, 1);
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: rgba(243, 229, 216, 1);
+}
+body.dark {
+  background-color: black;
 }
 /*-----------------------------------*/
 header {
@@ -49,9 +56,7 @@ nav button {
   background: transparent;
 }
 /*-----------------------------------*/
-body {
-  background-color: #f3e5d8;
-}
+
 main {
   max-width: 1100px;
   margin: 20px auto;
@@ -64,14 +69,24 @@ main {
 #grid-container {
   display: grid;
   grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr;
+  grid-template-areas: " #left  #rightup";
+  gap: 20px;
 }
-/*-----------------------------------*/
+/*---------------Lado izquierdo------*/
+#left {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+.dark #left {
+  background-color: rgba(47, 47, 47, 1);
+}
 #image {
   display: flex;
   margin-bottom: -20px;
   border-radius: 10px;
 }
-#image img {
+#left #image img {
   position: relative;
   width: 100%;
   height: 50vh;
@@ -80,22 +95,6 @@ main {
   object-fit: cover;
   border-radius: 25px;
 }
-/*-----------------------------------*/
-#box1 {
-  margin-left: 15px;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 10px;
-}
-#box1 h2 {
-  color: rgba(126, 67, 51, 1);
-  padding: 20px;
-}
-#box1 ul li {
-  font-family: "DM Sans";
-  color: black;
-}
-/*-----------------------------------*/
-
 #box2 {
   margin-top: 10px;
   padding: 0px 10px 0px 20px;
@@ -105,15 +104,94 @@ main {
   color: rgba(126, 67, 51, 1);
   padding-bottom: 10px;
 }
+.dark #box2 > h1 {
+  color: rgba(255, 255, 255, 1);
+}
 #box2 > p {
   font-family: "DM Sans";
   color: black;
 }
-/*-----------------------------------*/
-
-#box3 > h2 {
+.dark #box2 > p {
+  color: rgba(255, 255, 255, 1);
+}
+#box4 div {
+  margin: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff7fc;
+  border-radius: 10px;
+}
+.dark #box4 div {
+  background-color: rgba(78, 77, 78, 1);
+}
+#box4 h2 {
   color: rgba(126, 67, 51, 1);
   padding-bottom: 10px;
+}
+.dark #box4 h2 {
+  color: rgba(255, 255, 255, 1);
+}
+#box4 ul li {
+  font-family: "DM Sans";
+  color: black;
+  padding-bottom: 5px;
+}
+.dark #box4 ul li {
+  color: rgba(255, 255, 255, 1);
+}
+#box6 {
+  padding: 0px 10px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -0px;
+  border-end-end-radius: 10px;
+}
+#box6 > h2 {
+  font-family: "DM Serif Display";
+  color: rgba(126, 67, 51, 1);
+  padding-bottom: 10px;
+}
+.dark #box6 > h2 {
+  color: rgba(255, 255, 255, 1);
+}
+#box6 > ol li {
+  font-family: "DM Sans";
+  color: black;
+}
+.dark #box6 > ol li {
+  color: rgba(255, 255, 255, 1);
+}
+/*---------------Lado derecho---------------------*/
+
+#box1 h2 {
+  color: rgba(126, 67, 51, 1);
+  padding: 20px;
+}
+.dark #box1 h2 {
+  color: rgba(255, 255, 255, 1);
+}
+#box1 ul li {
+  font-family: "DM Sans";
+  color: black;
+}
+.dark #box1 ul li {
+  color: rgba(255, 255, 255, 1);
+}
+#box1-3 {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+.dark #box1-3 {
+  background-color: rgba(47, 47, 47, 1);
+}
+#box3 > h2 {
+  color: rgba(126, 67, 51, 1);
+  padding: 20px;
+}
+.dark #box3 .nutrition,
+.dark #box3 .right,
+.dark #box3 > h2 {
+  color: rgba(255, 255, 255, 1);
 }
 #box3 .nutrition {
   width: 100%;
@@ -130,7 +208,9 @@ main {
   border-bottom: 1px solid rgba(126, 67, 51, 1);
   padding: 10px 0;
 }
-
+.dark #box3 .row {
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
 #box3 .left {
   width: 50%;
   text-align: left;
@@ -142,39 +222,20 @@ main {
 
   color: rgba(126, 67, 51, 1);
 }
-/*-----------------------------------*/
-
-#box4 div {
-  margin: 20px 20px 20px 0px;
-  padding: 30px 30px 30px 30px;
-  border-radius: 10px;
-  background-color: #fff7fc;
-  border-radius: 10px;
-}
-#box4 h2 {
-  color: rgba(126, 67, 51, 1);
-  padding-bottom: 10px;
-}
-#box4 ul li {
-  font-family: "DM Sans";
-  color: black;
-  padding-bottom: 5px;
-}
-/*-----------------------------------*/
-
 #box5 {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 255, 255, 1);
-  margin-left: 15px;
   margin-top: 20px;
   padding: 10px;
   border-radius: 10px;
 }
-
+.dark #box5 {
+  background-color: rgba(47, 47, 47, 1);
+}
 #box5 > div {
-  margin-top: 10px;
+  margin: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -186,56 +247,56 @@ main {
   border-radius: 10px;
   padding-right: 5px;
 }
-
+#Omellete {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+  width: 110px;
+}
 .name-box5,
 .para-box5 {
   width: 100%;
   margin: 5px;
+}
+a .name-box5 {
+  color: black;
 }
 #box5 h2 {
   color: rgba(126, 67, 51, 1);
   padding-right: 150px;
   padding-top: 10px;
 }
-/*-----------------------------------*/
-
-#box6 {
-  padding: 0px 10px 30px 20px;
-  display: flex;
-  flex-direction: column;
-  margin-top: -0px;
-  border-end-end-radius: 10px;
+.dark #box5 h2 {
+  color: rgba(255, 255, 255, 1);
 }
-#box6 > h2 {
-  font-family: "DM Serif Display";
-  color: rgba(126, 67, 51, 1);
-  padding-bottom: 10px;
+.dark #box5 a h3 {
+  color: rgba(255, 255, 255, 1);
 }
-
-#box6 > ol li {
-  font-family: "DM Sans";
-  color: black;
-}
-/*-----------------------------------*/
 #box7 {
   padding-top: 20px;
-  margin-left: 15px;
 }
 #box7 .comentario {
-  width: 315px;
+  width: auto;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 1);
+}
+.dark #box7 .comentario {
+  background-color: rgba(47, 47, 47, 1);
 }
 #box7 .comentario h2 {
   margin-top: 0;
   color: rgba(126, 67, 51, 1);
   padding-bottom: 10px;
 }
+.dark #box7 .comentario h2 {
+  color: rgba(255, 255, 255, 1);
+}
 #box7 textarea {
   width: 100%;
-  height: 100px;
+  height: 120px;
   margin-bottom: 10px;
   padding: 5px;
   border: 1px solid black;
@@ -245,17 +306,11 @@ main {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: rgba(37, 85, 56, 1);
   color: #fff;
   border: none;
   border-radius: 3px;
   cursor: pointer;
-}
-#image,
-#box2,
-#box4,
-#box6 {
-  background-color: white;
 }
 footer {
   background-color: rgba(37, 85, 56, 1);
@@ -285,11 +340,37 @@ footer .ri {
 footer .ri h2 {
   font-family: "DM Sans";
 }
-@media (max-width: 1400px) {
-  #box2 {
-    margin-top: -100px;
+@media (max-width: 990px) {
+  #grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      " #left "
+      " #rightup";
+    gap: 20px;
   }
-  #box6 {
-    margin-top: -90px;
+  #box5 > div {
+    margin: 10px;
+  }
+  #box5 {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 500px) {
+  #grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1000px;
+    grid-template-areas:
+      " #left "
+      " #rightup";
+    gap: 20px;
   }
 }

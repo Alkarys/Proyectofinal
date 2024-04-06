@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/formulario.css" />
   </head>
-  <body >
+  <body>
     <header>
       <nav>
         <div class="left">
@@ -30,30 +30,41 @@
       </div>
       <form action="">
         <h2 class="top">Recipe name</h2>
-        <div>
+        <div class="answer">
           <label for="text1"></label>
           <input type="text" name="nombre-receta" id="text1" />
         </div>
         <h2 class="top">Preparation Time</h2>
-        <div>
+        <div class="answer">
           <h3 id="minute">In minutes</h3>
           <label for="text2"></label>
           <input type="number" name="tiempo-preparacion" id="text2" />
         </div>
         <h2 class="top">Ingredients</h2>
-        <div>
+        <div class="answer">
           <label for="text3"></label>
-          <input type="text" name="ingredientes" id="text3" />
+          <textarea
+            name="ingredientes"
+            id="text3"
+            cols="30"
+            rows="10"
+          ></textarea>
         </div>
         <h2 class="top">Instructions</h2>
-        <div>
+        <div class="answer">
           <label for="text4"></label>
-          <input type="text" name="instrucciones" id="text4" />
+          <textarea
+            name="instrucciones"
+            id="text4"
+            cols="30"
+            rows="10"
+          ></textarea>
         </div>
         <div>
           <button id="but1" type="submit">Send</button>
         </div>
       </form>
+      
     </main>
     <footer>
       <div class="le">

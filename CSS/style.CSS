@@ -13,6 +13,9 @@ body {
   padding: 0;
   background-color: rgba(243, 229, 216, 1);
 }
+body.dark {
+  background-color: black;
+}
 header {
   padding: 30px 20px 20px 20px;
 }
@@ -22,7 +25,7 @@ header nav {
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  
+
   border-radius: 10px;
 }
 header nav a {
@@ -82,6 +85,9 @@ main #text {
   padding-bottom: 30px;
   font-family: "DM Serif Display", serif;
 }
+.dark main #text {
+  color: rgba(255, 255, 255, 1);
+}
 #grid-container {
   width: 100%; /* VW -> Viewport Width */
   /*height: 100vh; /* VH -> Viewport Height */
@@ -112,6 +118,9 @@ main #text {
 #one #box1 h1 {
   color: rgba(126, 67, 51, 1);
   padding: 10px;
+}
+.dark #one #box1 h1 a {
+  color: rgba(255, 255, 255, 1);
 }
 #one #box1 ul li {
   font-family: "DM Sans";
@@ -216,14 +225,37 @@ main #text {
 #six #box6 ul li {
   font-family: "DM Sans";
 }
+.dark #one #box1,
+.dark #two #box2,
+.dark #three #box3,
+.dark #four #box4,
+.dark #five #box5,
+.dark #six #box6 {
+  background-color: rgba(47, 47, 47, 1);
+}
 
+.dark #two #box2 h1,
+.dark #three #box3 h1,
+.dark #four #box4 h1,
+.dark #five #box5 h1,
+.dark #six #box6 h1 {
+  color: rgba(255, 255, 255, 1);
+}
+.dark #one #box1 ul li,
+.dark #two #box2 ul li,
+.dark #three #box3 ul li,
+.dark #four #box4 ul li,
+.dark #five #box5 ul li,
+.dark #six #box6 ul li {
+  color: rgba(255, 255, 255, 1);
+}
 footer {
   background-color: rgba(37, 85, 56, 1);
   color: white;
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  
+
   border-radius: 10px;
   margin: 20px 20px 0px 20px;
 }
@@ -248,5 +280,40 @@ footer .right h2 {
 @media (max-width: 1850px) {
   header nav {
     max-width: 2000px;
+  }
+}
+@media (max-width: 990px) {
+  #grid-container {
+    width: 100%; /* VW -> Viewport Width */
+    /*height: 100vh; /* VH -> Viewport Height */
+    margin: 0 auto;
+    gap: 20px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      " #one   #two"
+      " #three #four"
+      " #five  #six";
+  }
+}
+@media (max-width: 500px) {
+  #grid-container {
+    width: 100%; /* VW -> Viewport Width */
+    /*height: 100vh; /* VH -> Viewport Height */
+    margin: 0 auto;
+    gap: 20px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr ;
+    grid-template-areas:
+      " #one   "
+      " #two"
+      "#three"
+      " #four"
+      " #five "
+      " #six";
   }
 }
